@@ -1,0 +1,26 @@
+{
+  "name": "oss-license-checker",
+  "version": "1.0.0",
+  "description": "License check from package.json, gradle, podfile...",
+  "main": "dist/program.js",
+  "license": "MIT",
+  "bin": {
+    "oss-license-checker": "./bin/oss-license-checker"
+  },
+  "keywords": [
+    "oss license",
+    "license"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/investycorp/oss-license-checker"
+  },
+  "bugs": {
+    "url": "https://github.com/investycorp/oss-license-checker/issues"
+  },
+  "homepage": "https://github.com/investycorp/oss-license-checker#readme",
+  "author": "Investy Co, Ltd.",
+  "files": [
+    "dist"
+  ]
+}
