@@ -15,5 +15,17 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'import/no-dynamic-require': 0,
+    'global-require': 0,
+    'import/extensions': 0,
+    'import/prefer-default-export': 0,
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts'],
+      },
+      typescript: './tsconfig.json',
+    },
   },
 };
