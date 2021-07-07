@@ -1,6 +1,6 @@
 import path from 'path';
 
-const loadDependency = () => {
+const loadDependencies = () => {
   const packageJsonPath = path.join(process.cwd(), 'package.json');
   const packageJson = require(packageJsonPath);
   const dependencies = packageJson.dependencies ? Object.keys(packageJson.dependencies) : [];
@@ -8,4 +8,4 @@ const loadDependency = () => {
   return dependencies;
 };
 
-export { loadDependency };
+export default loadDependencies;
