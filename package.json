@@ -24,7 +24,8 @@
     "dist"
   ],
   "scripts": {
-    "postpublish": "tsc"
+    "postpublish": "tsc",
+    "package": "tsc && npm pack"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",
