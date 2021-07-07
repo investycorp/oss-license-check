@@ -23,6 +23,9 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "postpublish": "tsc"
+  },
   "devDependencies": {
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
