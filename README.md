@@ -1,5 +1,11 @@
 # oss-license-checker
 
+## Support (or will support) package managers
+
+* [x] npm - support since v0.0.1
+* [] Gradle - will support..
+* [] CocoaPods - will support..
+
 ## Get dependency and license information
 
 You can check nodejs dependencies information and license information
