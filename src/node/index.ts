@@ -4,7 +4,7 @@ import outputMessage from '../output';
 import resultToJson from '../output/resultToJson';
 import resultToHTML from '../output/resultToHTML';
 
-const getNodeLicenses = (json: any, html: any) => {
+const getNodeLicenses = (json: any, html: any, template: any) => {
   outputMessage('green', 'Get nodejs dependencies..');
 
   const dependencies = loadDependencies();
@@ -23,7 +23,9 @@ const getNodeLicenses = (json: any, html: any) => {
   if (typeof html === 'boolean' || typeof html === 'string') {
     outputMessage('cyan', 'Result export to html..');
 
-    const result = resultToHTML(licenses, typeof html === 'string' ? html : null);
+    const result = typeof template === 'string'
+      ? resultToHTML(licenses, typeof html === 'string' ? html : null, template)
+      : resultToHTML(licenses, typeof html === 'string' ? html : null);
 
     outputMessage('orange', `Result is saved at ${result}`);
   }

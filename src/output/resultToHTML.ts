@@ -5,8 +5,12 @@ import escapeHtml from 'escape-html';
 import { PackageInfo } from '../types/packageInfo';
 import { getFullLicenseText, getLicenseFullName } from '../licenses';
 
-const resultToHTML = (result: PackageInfo[], dest: string | null): string => {
-  let template = readFileSync(path.join(__dirname, '../templates/html_template.html')).toString();
+const resultToHTML = (
+  result: PackageInfo[],
+  dest: string | null,
+  customTemplate?: string,
+): string => {
+  let template = readFileSync(customTemplate || path.join(__dirname, '../templates/html_template.html')).toString();
   const dependencies = result.map((dependency) => `
     <li>
         <h1 style="font-size: 16px; margin: 0; padding: 0;">${dependency.name}</h1>
