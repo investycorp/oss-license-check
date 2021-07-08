@@ -1,5 +1,8 @@
 # oss-license-check
 
+[![version](https://img.shields.io/npm/v/oss-license-check)](https://npmjs.org/package/oss-license-check)
+[![license](https://img.shields.io/npm/l/oss-license-check)](https://github.com/investycorp/oss-license-check/LICENSE)
+
 ## Support (or will support) package managers
 
 * [x] npm - support since v0.0.1
@@ -104,4 +107,10 @@ oss-license-check --html --template [templateFilePath]
 
 ## License
 
-MIT License, as found in the [LICENSE](https://github.com/investycorp/oss-license-check/blob/master/LICENSE) file.
+MIT License, as found in the [LICENSE](https://github.com/investycorp/oss-license-check/LICENSE) file.
+
+## Author
+
+Chan Kang <<aries.kang@investy.us>>
+
+Built with ❤️ by Investy
