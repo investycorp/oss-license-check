@@ -1,0 +1,21 @@
+name: Publish to Registry
+
+on:
+  pull_request:
+    branches: [main]
+    types: [closed, labeled]
+    
+jobs:
+  publish:
+    if: ${{ github.event.label.name == 'deploy' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.REGISTRY_TOKEN }}
+          registry: https://npm.pkg.github.com/
