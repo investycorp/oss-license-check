@@ -1,6 +1,6 @@
 {
   "name": "oss-license-check",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "License check from package.json, gradle, podfile...",
   "main": "dist/program.js",
   "license": "MIT",
