@@ -1,12 +1,7 @@
 import path from 'path';
 import { readdirSync, readFileSync } from 'fs';
 
-interface PackageInfo {
-    name: string;
-    license: string;
-    copyright: string;
-    repositoryUrl: string;
-}
+import { PackageInfo } from '../types/packageInfo';
 
 const getLicenses = (dependencies: string[]) => {
   const nodeModulesPath = path.join(process.cwd(), 'node_modules');
