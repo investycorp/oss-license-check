@@ -11,7 +11,7 @@ oss-license-checker
 
 You can see something like below:
 
-```json
+```
 [
   {
     name: 'chalk',
