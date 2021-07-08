@@ -24,8 +24,9 @@
     "dist"
   ],
   "scripts": {
-    "postpublish": "tsc",
-    "package": "tsc && npm pack"
+    "build": "tsc && cp -R ./src/templates/ ./dist/templates",
+    "postpublish": "npm run build",
+    "package": "npm run build && npm pack"
   },
   "devDependencies": {
     "@types/node": "^16.0.0",
