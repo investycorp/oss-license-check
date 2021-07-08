@@ -1,6 +1,6 @@
 {
   "name": "oss-license-check",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "License check from package.json, gradle, podfile...",
   "main": "dist/program.js",
   "license": "MIT",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/investycorp/oss-license-check#readme",
   "author": "Investy Co, Ltd.",
   "files": [
+    "bin/**/*",
     "dist/**/*"
   ],
   "scripts": {
