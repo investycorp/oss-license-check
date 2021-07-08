@@ -1,4 +1,4 @@
-# oss-license-checker
+# oss-license-check
 
 ## Support (or will support) package managers
 
@@ -11,8 +11,8 @@
 You can check nodejs dependencies information and license information
 
 ```
-npm install -g oss-license-checker
-oss-license-checker
+npm install -g oss-license-check
+oss-license-check
 ```
 
 You can see something like below:
@@ -51,7 +51,7 @@ You can see something like below:
 You can export result to json file.
 
 ```
-oss-license-checker --json
+oss-license-check --json
 ```
 
 Result file is saved at './license.json'.
@@ -59,7 +59,7 @@ Result file is saved at './license.json'.
 or, you can specify json saved path
 
 ```
-oss-license-checker --json [dest]
+oss-license-check --json [dest]
 ```
 
 ## Result export to HTML
@@ -67,7 +67,7 @@ oss-license-checker --json [dest]
 You can export result to html file.
 
 ```
-oss-license-checker --html
+oss-license-check --html
 ```
 
 Result file is saved at './license.html'.
@@ -75,7 +75,7 @@ Result file is saved at './license.html'.
 or, you can specify html saved path
 
 ```
-oss-license-checker --html [dest]
+oss-license-check --html [dest]
 ```
 
 ### Use custom template
@@ -99,9 +99,9 @@ licenses variable is provide license full text.
 you can make template file, and use it, like below.
 
 ```
-oss-license-checker --html --template [templateFilePath]
+oss-license-check --html --template [templateFilePath]
 ```
 
 ## License
 
-MIT License, as found in the [LICENSE](https://github.com/investycorp/oss-license-checker/blob/master/LICENSE) file.
+MIT License, as found in the [LICENSE](https://github.com/investycorp/oss-license-check/blob/master/LICENSE) file.
