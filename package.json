@@ -1,6 +1,6 @@
 {
   "name": "oss-license-checker",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "License check from package.json, gradle, podfile...",
   "main": "dist/program.js",
   "license": "MIT",
@@ -24,9 +24,12 @@
     "dist"
   ],
   "scripts": {
-    "postpublish": "tsc"
+    "build": "tsc && cp -R ./src/templates/ ./dist/templates",
+    "postpublish": "npm run build",
+    "package": "npm run build && npm pack"
   },
   "devDependencies": {
+    "@types/escape-html": "^1.0.1",
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
@@ -37,6 +40,8 @@
   },
   "dependencies": {
     "chalk": "^4.1.1",
-    "commander": "^8.0.0"
+    "commander": "^8.0.0",
+    "escape-html": "^1.0.3",
+    "spdx-license-list": "^6.4.0"
   }
 }
