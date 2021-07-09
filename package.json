@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@types/escape-html": "^1.0.1",
+    "@types/glob": "^7.1.4",
     "@types/node": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
@@ -43,6 +44,7 @@
     "chalk": "^4.1.1",
     "commander": "^8.0.0",
     "escape-html": "^1.0.3",
+    "glob": "^7.1.7",
     "spdx-license-list": "^6.4.0"
   }
 }
