@@ -46,6 +46,7 @@
     "escape-html": "^1.0.3",
     "glob": "^7.1.7",
     "gradle-to-js": "^2.0.0",
+    "node-fetch": "^2.6.1",
     "spdx-license-list": "^6.4.0"
   }
 }
