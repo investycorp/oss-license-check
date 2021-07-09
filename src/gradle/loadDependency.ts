@@ -1,7 +1,7 @@
 import glob from 'glob';
 import g2js from 'gradle-to-js/lib/parser';
 
-const loadDependencies = () => new Promise((resolve) => {
+const loadDependencies = () => new Promise<string[]>((resolve) => {
   const dependencies: string[] = [];
 
   glob(`${process.cwd()}/**/build.gradle`, {}, (err, files) => {
