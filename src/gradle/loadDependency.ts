@@ -16,7 +16,7 @@ const loadDependencies = () => new Promise<string[]>((resolve) => {
         });
       }
     })).then(() => {
-      resolve(dependencies);
+      resolve(Array.from(new Set(dependencies)));
     });
   });
 });
