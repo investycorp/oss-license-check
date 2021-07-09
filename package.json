@@ -45,6 +45,7 @@
     "commander": "^8.0.0",
     "escape-html": "^1.0.3",
     "glob": "^7.1.7",
+    "gradle-to-js": "^2.0.0",
     "spdx-license-list": "^6.4.0"
   }
 }
