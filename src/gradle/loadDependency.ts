@@ -10,8 +10,8 @@ const loadDependencies = () => new Promise<string[]>((resolve) => {
 
       if (representation.dependencies) {
         representation.dependencies.forEach((dependency: any) => {
-          if (dependency.type === 'implementation' && dependency.group && dependency.name) {
-            dependencies.push(`${dependency.group}/${dependency.name}`);
+          if (dependency.type === 'implementation' && dependency.group && dependency.name && dependency.version !== '+') {
+            dependencies.push(`${dependency.group}/${dependency.name}/${dependency.version}`);
           }
         });
       }
