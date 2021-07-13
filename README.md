@@ -6,7 +6,7 @@
 ## Support (or will support) package managers
 
 * [x] npm - support since v0.0.1
-* [x] Gradle - support since v0.0.5
+* [x] Gradle (or Maven) - support since v0.0.5
 * [ ] CocoaPods - will support..
 
 ## Get dependency and license information
