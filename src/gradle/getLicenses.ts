@@ -48,6 +48,47 @@ const getLicenses = (dependencies: string[]) => new Promise<PackageInfo[]>((reso
             });
           }
         }
+        // if gradle dependency in google maven repository
+        const packageAuthor = packageNameArr[0].split('.').join('/');
+        const artifactName = packageNameArr[1];
+        const artifactVersion = packageNameArr[2];
+        const googleUrl = `https://dl.google.com/android/maven2/${packageAuthor}/${artifactName}/${artifactVersion}/${artifactName}-${artifactVersion}.pom`;
+        const googleResponse = await fetch(googleUrl);
+
+        if (googleResponse.status === 200) {
+          const googleResponseBody = await googleResponse.text();
+          const artifact = XMLParser.parse(googleResponseBody);
+
+          if (artifact.project) {
+            const name = artifact.project.name || 'unknown';
+            let license = 'unknown';
+            let copyright = 'unknown';
+            let repositoryUrl = 'unknown';
+
+            if (artifact.project.organization) {
+              copyright = `Copyright (c) ${artifact.project.organization.name}`;
+            } else if (artifact.project.developers) {
+              copyright = `Copyright (c) ${artifact.project.developers.developer.name}`;
+            }
+
+            if (artifact.project.licenses.license.url) {
+              const spdxInfo = getSpdxByURL(artifact.project.licenses.license.url);
+
+              license = spdxInfo;
+            }
+
+            if (artifact.project.scm.connection) {
+              repositoryUrl = artifact.project.scm.connection.replace('scm:git:', '');
+            }
+
+            licenses.push({
+              name: name || 'unknown',
+              license: license || 'unknown',
+              copyright,
+              repositoryUrl: repositoryUrl || 'unknown',
+            });
+          }
+        }
       }),
     )
     .then(() => {
