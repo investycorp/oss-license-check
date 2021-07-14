@@ -3,6 +3,7 @@ import { program } from 'commander';
 
 import getNodeLicenses from './node';
 import getGradleLicenses from './gradle';
+import getCocoaPodsLicenses from './cocoapods';
 import outputMessage from './output';
 import resultToHTML from './output/resultToHTML';
 import resultToJson from './output/resultToJson';
@@ -21,7 +22,12 @@ const launch = async (opts: any) => {
 
   const nodeLicenses = getNodeLicenses();
   const gradleLicenses = await getGradleLicenses();
-  const licenses = [...nodeLicenses, ...gradleLicenses];
+  const cocoapodsLicenses = await getCocoaPodsLicenses();
+  const licenses = [
+    ...nodeLicenses,
+    ...gradleLicenses,
+    ...cocoapodsLicenses,
+  ];
 
   console.log(licenses);
 
